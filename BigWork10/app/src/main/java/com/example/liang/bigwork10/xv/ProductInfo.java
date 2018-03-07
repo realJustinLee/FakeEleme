@@ -17,7 +17,7 @@ public class ProductInfo extends BaseInfo
 	public ProductInfo(String id, String name, String imageUrl, String desc, double price, int count)
 	{
 
-		super.Id = id;
+		super.id = id;
 		super.name = name;
 		this.imageUrl = imageUrl;
 		this.desc = desc;

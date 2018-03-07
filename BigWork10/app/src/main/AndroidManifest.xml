@@ -20,7 +20,7 @@
         <activity android:name=".Main_Interface"
             android:windowSoftInputMode="stateHidden">
         </activity>
-        <activity android:name=".shop.ItemShop">
+        <activity android:name=".shop.Restaurant">
 
         </activity>
         <activity android:name=".Delicacy"></activity>

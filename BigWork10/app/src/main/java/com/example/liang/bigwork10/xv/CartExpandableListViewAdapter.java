@@ -127,11 +127,11 @@ public class CartExpandableListViewAdapter extends BaseExpandableListAdapter
 				public void onClick(View v)
 
 				{
-					group.setChoosed(((CheckBox) v).isChecked());
+					group.setSelected(((CheckBox) v).isChecked());
 					checkInterface.checkGroup(groupPosition, ((CheckBox) v).isChecked());// 暴露组选接口
 				}
 			});
-			gholder.cb_check.setChecked(group.isChoosed());
+			gholder.cb_check.setChecked(group.isSelected());
 		}
 		return convertView;
 	}
@@ -167,13 +167,13 @@ public class CartExpandableListViewAdapter extends BaseExpandableListAdapter
 			cholder.tv_product_desc.setText(product.getDesc());
 			cholder.tv_price.setText("￥" + product.getPrice() + "");
 			cholder.tv_count.setText(product.getCount() + "");
-			cholder.cb_check.setChecked(product.isChoosed());
+			cholder.cb_check.setChecked(product.isSelected());
 			cholder.cb_check.setOnClickListener(new OnClickListener()
 			{
 				@Override
 				public void onClick(View v)
 				{
-					product.setChoosed(((CheckBox) v).isChecked());
+					product.setSelected(((CheckBox) v).isChecked());
 					cholder.cb_check.setChecked(((CheckBox) v).isChecked());
 					checkInterface.checkChild(groupPosition, childPosition, ((CheckBox) v).isChecked());// 暴露子选接口
 				}

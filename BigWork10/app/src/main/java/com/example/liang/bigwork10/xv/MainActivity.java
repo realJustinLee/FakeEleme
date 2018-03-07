@@ -184,8 +184,8 @@ public class MainActivity extends Activity implements CartExpandableListViewAdap
     }
 
     /**
-     * 删除操作<br>
-     * 1.不要边遍历边删除，容易出现数组越界的情况<br>
+     * 删除操作
+     * 1.不要边遍历边删除，容易出现数组越界的情况
      * 2.现将要删除的对象放进相应的列表容器中，待遍历完后，以removeAll的方式进行删除
      */
     protected void doDelete() {
@@ -193,14 +193,14 @@ public class MainActivity extends Activity implements CartExpandableListViewAdap
         List<GroupInfo> toBeDeleteGroups = new ArrayList<>();
         for (int i = 0; i < groups.size(); i++) {
             GroupInfo group = groups.get(i);
-            if (group.isChoosed()) {
+            if (group.isSelected()) {
                 toBeDeleteGroups.add(group);
             }
             // 待删除的子元素列表
             List<ProductInfo> toBeDeleteProducts = new ArrayList<>();
             List<ProductInfo> child = children.get(group.getId());
             for (ProductInfo cell : child) {
-                if (cell.isChoosed()) {
+                if (cell.isSelected()) {
                     toBeDeleteProducts.add(cell);
                 }
             }
@@ -246,7 +246,7 @@ public class MainActivity extends Activity implements CartExpandableListViewAdap
         GroupInfo group = groups.get(groupPosition);
         List<ProductInfo> child = children.get(group.getId());
         for (ProductInfo cell : child) {
-            cell.setChoosed(isChecked);
+            cell.setSelected(isChecked);
         }
         if (isAllCheck()) {
             cbCheckAll.setChecked(true);
@@ -264,17 +264,17 @@ public class MainActivity extends Activity implements CartExpandableListViewAdap
         GroupInfo group = groups.get(groupPosition);
         List<ProductInfo> child = children.get(group.getId());
         for (int i = 0; i < child.size(); i++) {
-            if (child.get(i).isChoosed() != isChecked) {
+            if (child.get(i).isSelected() != isChecked) {
                 allChildSameState = false;
                 break;
             }
         }
         if (allChildSameState) {
             // 如果所有子元素状态相同，那么对应的组元素被设为这种统一状态
-            group.setChoosed(isChecked);
+            group.setSelected(isChecked);
         } else {
             // 否则，组元素一律设置为未选中状态
-            group.setChoosed(false);
+            group.setSelected(false);
         }
 
         if (isAllCheck()) {
@@ -288,7 +288,7 @@ public class MainActivity extends Activity implements CartExpandableListViewAdap
 
     private boolean isAllCheck() {
         for (GroupInfo group : groups) {
-            if (!group.isChoosed()) {
+            if (!group.isSelected()) {
                 return false;
             }
         }
@@ -300,20 +300,20 @@ public class MainActivity extends Activity implements CartExpandableListViewAdap
      */
     private void doCheckAll() {
         for (int i = 0; i < groups.size(); i++) {
-            groups.get(i).setChoosed(cbCheckAll.isChecked());
+            groups.get(i).setSelected(cbCheckAll.isChecked());
             GroupInfo group = groups.get(i);
             List<ProductInfo> child = children.get(group.getId());
             for (int j = 0; j < child.size(); j++) {
-                child.get(j).setChoosed(cbCheckAll.isChecked());
+                child.get(j).setSelected(cbCheckAll.isChecked());
             }
         }
         sellValue.notifyDataSetChanged();
     }
 
     /**
-     * 统计操作<br>
-     * 1.先清空全局计数器<br>
-     * 2.遍历所有子元素，只要是被选中状态的，就进行相关的计算操作<br>
+     * 统计操作
+     * 1.先清空全局计数器
+     * 2.遍历所有子元素，只要是被选中状态的，就进行相关的计算操作
      * 3.给底部的textView进行数据填充
      */
     private void calculate() {
@@ -324,7 +324,7 @@ public class MainActivity extends Activity implements CartExpandableListViewAdap
             List<ProductInfo> child = children.get(group.getId());
             for (int j = 0; j < child.size(); j++) {
                 ProductInfo product = child.get(j);
-                if (product.isChoosed()) {
+                if (product.isSelected()) {
                     totalCount++;
                     totalPrice += product.getPrice() * product.getCount();
                 }

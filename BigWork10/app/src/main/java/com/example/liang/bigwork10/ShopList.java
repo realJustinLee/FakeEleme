@@ -15,9 +15,8 @@ import android.widget.ListView;
 
 import com.example.liang.bigwork10.adapter.MyListAdpter;
 import com.example.liang.bigwork10.inter.MySocket;
-import com.example.liang.bigwork10.shop.ItemShop;
+import com.example.liang.bigwork10.shop.Restaurant;
 
-import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -87,7 +86,7 @@ public class ShopList extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Log.i("tab",shopname[i]);
-                Intent intent=new Intent(getContext(), ItemShop.class);
+                Intent intent=new Intent(getContext(), Restaurant.class);
                 intent.putExtra("name",shopname[i]);
                 startActivity(intent);
             }

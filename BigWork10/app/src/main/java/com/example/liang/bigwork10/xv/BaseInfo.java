@@ -1,53 +1,46 @@
 package com.example.liang.bigwork10.xv;
 
 
-public class BaseInfo
-{
-	protected String Id;
-	protected String name;
-	protected boolean isChoosed;
+/**
+ * @author lixin
+ */
+public class BaseInfo {
+    protected String id;
+    protected String name;
+    protected boolean isSelected;
 
-	public BaseInfo()
-	{
-		super();
-	}
+    public BaseInfo() {
+        super();
+    }
 
-	public BaseInfo(String id, String name)
-	{
-		super();
-		Id = id;
-		this.name = name;
+    public BaseInfo(String id, String name) {
+        super();
+        this.id = id;
+        this.name = name;
+    }
 
-	}
+    public String getId() {
+        return id;
+    }
 
-	public String getId()
-	{
-		return Id;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setId(String id)
-	{
-		Id = id;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName()
-	{
-		return name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setName(String name)
-	{
-		this.name = name;
-	}
+    public boolean isSelected() {
+        return isSelected;
+    }
 
-	public boolean isChoosed()
-	{
-		return isChoosed;
-	}
-
-	public void setChoosed(boolean isChoosed)
-	{
-		this.isChoosed = isChoosed;
-	}
+    public void setSelected(boolean isSelected) {
+        this.isSelected = isSelected;
+    }
 
 }
