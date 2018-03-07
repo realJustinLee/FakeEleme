@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="80dp">
+        <TextView
+            android:id="@+id/name_one"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:text="精品小吃"
+            android:layout_width="120dp"
+            android:layout_height="60dp" />
+        <TextView
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="22"
+            android:id="@+id/count_one"
+            android:textColor="#ffffff"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#ff0000"
+            android:textSize="15dp"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

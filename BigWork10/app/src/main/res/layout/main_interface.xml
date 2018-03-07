@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0098ff">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#ffffff"
+                android:hint="  搜素商家、商品名称"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="#0098ff"
+                android:text="搜索"
+                android:textColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="277dp" />
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <LinearLayout
+                android:id="@+id/delicious"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/delicious"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:text="美食"
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/breakfast"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/breakfast"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:text="早餐"
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fruit"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/fruit"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:text="水果"
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/drink"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/drink"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:text="饮品"
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#aaaaaa" />
+
+        <fragment
+            android:id="@+id/shoplist"
+            android:name="com.example.liang.bigwork10.ShopList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></fragment>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="0dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:background="#ff00"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="40dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:src="@mipmap/food"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:text="外卖"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="40dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:src="@mipmap/find"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:text="发现"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="40dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:src="@mipmap/order"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:text="订单"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="40dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:src="@mipmap/my"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:text="我的"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
