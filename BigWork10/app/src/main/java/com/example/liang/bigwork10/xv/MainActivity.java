@@ -287,13 +287,11 @@ public class MainActivity extends Activity implements CartExpandableListViewAdap
     }
 
     private boolean isAllCheck() {
-
         for (GroupInfo group : groups) {
             if (!group.isChoosed()) {
                 return false;
             }
         }
-
         return true;
     }
 
